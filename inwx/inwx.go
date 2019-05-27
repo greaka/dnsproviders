@@ -17,9 +17,8 @@ func init() {
 // The credentials are interpreted as follows:
 //
 // len(0): use credentials from environment
-// len(3): credentials[0] = Base URL
-//         credentials[1] = User ID
-//         credentials[2] = Key
+// len(2): credentials[0] = Username
+//         credentials[1] = Password
 func NewDNSProvider(credentials ...string) (caddytls.ChallengeProvider, error) {
 	switch len(credentials) {
 	case 0:
